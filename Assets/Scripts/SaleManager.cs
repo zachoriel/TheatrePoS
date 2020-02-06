@@ -21,17 +21,19 @@ public class SaleManager : MonoBehaviour
     }
     #endregion
 
-    int orderItems, totalItems = 0;
-    Dictionary<int, float> itemsOrdered = new Dictionary<int, float>();
-    float orderTotal, grandTotal;
+    [SerializeField] GameObject inputField;
 
-    [SerializeField] Text orderCost;
-    [SerializeField] Text totalCost;
-    [SerializeField] List<Text> itemSlots = new List<Text>();
-    [SerializeField] List<TextMeshProUGUI> shiftSummarySlots = new List<TextMeshProUGUI>();
+    [HideInInspector] public int orderItems, totalItems = 0;
+    public Dictionary<int, float> itemsOrdered = new Dictionary<int, float>();
+    [HideInInspector] public float orderTotal, grandTotal;
 
-    [SerializeField] GameObject shiftSummaryTextPrefab;
-    [SerializeField] Transform contentPrefab;
+    public Text orderCost;
+    public Text totalCost;
+    public List<Text> itemSlots = new List<Text>();
+    public List<TextMeshProUGUI> shiftSummarySlots = new List<TextMeshProUGUI>();
+
+    public GameObject shiftSummaryTextPrefab;
+    public Transform contentPrefab;
 
 
     void Update()
@@ -59,6 +61,11 @@ public class SaleManager : MonoBehaviour
         }
 
         shiftSummarySlots[totalItems - 1].text = item.name + "  -  $" + item.price.ToString("F2");
+    }
+
+    public void AddCustomItem(Item item)
+    {
+        inputField.SetActive(true);
     }
 
     public void SubmitOrder()
