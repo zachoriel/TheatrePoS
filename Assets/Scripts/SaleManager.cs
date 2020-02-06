@@ -40,6 +40,11 @@ public class SaleManager : MonoBehaviour
     {
         orderCost.text = "Order Total: $" + orderTotal.ToString("F2");
         totalCost.text = "Total Money Owed: $" + grandTotal.ToString("F2");
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void Additem(Item item)
