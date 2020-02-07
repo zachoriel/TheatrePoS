@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class SaleManager : MonoBehaviour
@@ -35,6 +36,13 @@ public class SaleManager : MonoBehaviour
     public GameObject shiftSummaryTextPrefab;
     public Transform contentPrefab;
 
+    public Text username;
+
+
+    void Start()
+    {
+        username.text = "Logged In User: " + UserTracker.instance.currentUser;
+    }
 
     void Update()
     {
@@ -43,7 +51,7 @@ public class SaleManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            SceneManager.LoadScene("LoginScene");
         }
     }
 
