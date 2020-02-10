@@ -1,4 +1,4 @@
-<b>Official release for the Theatre Point of Sale system.</b>
+<b>Movie Theatre Point of Sale system.</b>
 
 <b>Features</b>:
 
