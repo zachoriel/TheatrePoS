@@ -2,41 +2,57 @@
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using System;
 
 public class CustomInput : MonoBehaviour
 {
+    [Header("The Input Field")]
     public TMP_InputField textItem;
+    [Space]
+    [Header("The Custom Button's 'Item' Script")]
     public Item item;
 
+    // This only runs when the game object has been activated in SaleManager (see: AddCustomItem()).
     private void Update()
     {
+        // If the user presses enter...
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            item.price = float.Parse(textItem.text, CultureInfo.InvariantCulture.NumberFormat);
-
-            if (SaleManager.instance.orderItems < 20)
+            // If a custom input has been added...
+            if (textItem.text != null && textItem.text != "")
             {
-                SaleManager.instance.orderItems++;
-                SaleManager.instance.totalItems++;
-                SaleManager.instance.itemsOrdered.Add(SaleManager.instance.orderItems, item.price);
+                // Set the custom item's price (see function comment for explanation).
+                item.price = ItemPrice();
 
-                SaleManager.instance.itemSlots[SaleManager.instance.orderItems - 1].text = SaleManager.instance.orderItems.ToString() + ". " + item.name + "  -  $" + item.price.ToString("F2");
-                SaleManager.instance.orderTotal += item.price;
+                // Add the custom item to the shopping cart.
+                SaleManager.instance.AddItem(item);
+
+                // Close the prompt for custom input.
+                CloseCustomItemEditor();
             }
-
-            if (SaleManager.instance.totalItems >= 50)
-            {
-                GameObject newText = Instantiate(SaleManager.instance.shiftSummaryTextPrefab, SaleManager.instance.contentPrefab);
-                SaleManager.instance.shiftSummarySlots.Add(newText.GetComponent<TextMeshProUGUI>());
-            }
-
-            SaleManager.instance.shiftSummarySlots[SaleManager.instance.totalItems - 1].text = item.name + "  -  $" + item.price.ToString("F2");
-
-            textItem.text = null;
-            this.gameObject.SetActive(false);
         }
+
+        // If the user presses backspace...
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            // Close the prompt for custom input without entering a custom price.
+            CloseCustomItemEditor();
+        }
+    }
+
+    // Convert the inputted text to a float and output that value.
+    float ItemPrice()
+    {
+        float price = float.Parse(textItem.text, CultureInfo.InvariantCulture.NumberFormat);
+        return price;
+    }
+
+    // Close the input window.
+    void CloseCustomItemEditor()
+    {
+        // Reset the input field's text.
+        textItem.text = null;
+        // De-activate this game object, effectively stopping the Update() loop.
+        this.gameObject.SetActive(false);
     }
 }

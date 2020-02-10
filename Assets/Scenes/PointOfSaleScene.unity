@@ -425,7 +425,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 12483466}
@@ -1504,7 +1504,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 94320196}
@@ -1779,7 +1779,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 110207009}
@@ -2008,7 +2008,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 159451279}
@@ -3311,7 +3311,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 250111445}
@@ -3486,7 +3486,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 293223678}
@@ -3815,7 +3815,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 341411977}
@@ -4859,7 +4859,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 424133542}
@@ -6512,7 +6512,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 596160657}
@@ -6951,7 +6951,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 627795124}
@@ -8287,7 +8287,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 790113127}
@@ -9849,7 +9849,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 908092590}
@@ -10049,7 +10049,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 908294102}
@@ -10224,7 +10224,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 914798810}
@@ -12561,7 +12561,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1086220526}
@@ -13518,7 +13518,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1132295327}
@@ -14128,7 +14128,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1206741214}
@@ -15456,7 +15456,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1336266124}
@@ -16271,7 +16271,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1446758016}
@@ -16893,7 +16893,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1491365126}
@@ -18239,7 +18239,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1657912499}
@@ -18968,7 +18968,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1703629400}
@@ -19143,7 +19143,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1715919298}
@@ -19554,7 +19554,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1727103646}
@@ -19729,7 +19729,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1736622802}
@@ -20136,7 +20136,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1752809959}
@@ -20390,7 +20390,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1768194224}
@@ -21293,8 +21293,10 @@ MonoBehaviour:
   - {fileID: 1273778348}
   shiftSummaryTextPrefab: {fileID: 8924563434127651835, guid: bde9a0d7a6d590d4f9ce4365c8c5c1a2,
     type: 3}
-  contentPrefab: {fileID: 358781083}
+  summarySlotParent: {fileID: 358781083}
   username: {fileID: 1446084406}
+  maxItemsPerOrder: 20
+  numShiftSummarySlots: 50
 --- !u!4 &1863479484
 Transform:
   m_ObjectHideFlags: 0
@@ -22998,7 +23000,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2024175278}
@@ -23670,7 +23672,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1863479483}
-        m_MethodName: Additem
+        m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2138209413}

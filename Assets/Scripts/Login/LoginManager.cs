@@ -23,7 +23,7 @@ public struct LoginData
 
 public class LoginManager : MonoBehaviour
 {
-    [SerializeField] TMP_InputField newID, newPassword, idInput, passwordInput;
+    [SerializeField] TMP_InputField newID, newPassword, idInput, passwordInput, deleteID, deletePassword;
     [SerializeField] TextMeshProUGUI mainStatusText;
     [SerializeField] TextMeshProUGUI loginStatusText;
 
@@ -33,7 +33,7 @@ public class LoginManager : MonoBehaviour
     
     void Awake()
     {
-        string fileDestination = Application.persistentDataPath + "\\LoginInfo.dat";
+        string fileDestination = Application.persistentDataPath + "\\AccountInfo.dat";
         FileStream file;
 
         if (File.Exists(fileDestination))
@@ -51,10 +51,7 @@ public class LoginManager : MonoBehaviour
 
         userRegistry = loginData.userRegistry;
         registeredUsers = loginData.registeredUsers;
-    }
 
-    void Update()
-    {
         if (registeredUsers == 1)
         {
             mainStatusText.text = "There is " + registeredUsers + " registered user on this machine.";
@@ -70,25 +67,80 @@ public class LoginManager : MonoBehaviour
         string userID = newID.text;
         string userPassword = newPassword.text;
 
-        userRegistry.Add(userID, userPassword);
-        registeredUsers++;
-
-        string fileDestination = Application.persistentDataPath + "\\AccountInfo.dat";
-        FileStream file;
-
-        if (File.Exists(fileDestination))
+        if (!userRegistry.ContainsKey(userID))
         {
-            file = File.OpenWrite(fileDestination);
+            userRegistry.Add(userID, userPassword);
+            registeredUsers++;
+
+            string fileDestination = Application.persistentDataPath + "\\AccountInfo.dat";
+            FileStream file;
+
+            if (File.Exists(fileDestination))
+            {
+                file = File.OpenWrite(fileDestination);
+            }
+            else
+            {
+                file = File.Create(fileDestination);
+            }
+
+            LoginData loginData = new LoginData(userRegistry, registeredUsers);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(file, loginData);
+            file.Close();
+
+            if (registeredUsers == 1)
+            {
+                mainStatusText.text = "There is " + registeredUsers + " registered user on this machine.";
+            }
+            else
+            {
+                mainStatusText.text = "There are " + registeredUsers + " registered users on this machine.";
+            }
         }
         else
         {
-            file = File.Create(fileDestination);
+            Debug.LogError("Account Name Already Exists!");
         }
 
-        LoginData loginData = new LoginData(userRegistry, registeredUsers);
-        BinaryFormatter bf = new BinaryFormatter();
-        bf.Serialize(file, loginData);
-        file.Close();
+        newID.text = null;
+        newPassword.text = null;
+    }
+
+    public void DeleteUser()
+    {
+        string userID = deleteID.text;
+
+        if (userRegistry.ContainsKey(userID))
+        {
+            userRegistry.Remove(userID);
+            registeredUsers--;
+
+            string fileDestination = Application.persistentDataPath + "\\AccountInfo.dat";
+            FileStream file;
+
+            file = File.OpenWrite(fileDestination);
+
+            LoginData loginData = new LoginData(userRegistry, registeredUsers);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(file, loginData);
+            file.Close();
+
+            if (registeredUsers == 1)
+            {
+                mainStatusText.text = "There is " + registeredUsers + " registered user on this machine.";
+            }
+            else
+            {
+                mainStatusText.text = "There are " + registeredUsers + " registered users on this machine.";
+            }
+        }
+        else
+        {
+            Debug.LogError("User doesn't exist!");
+        }
+
+        deleteID.text = null;
     }
 
     public void SignIn()
@@ -114,6 +166,9 @@ public class LoginManager : MonoBehaviour
             loginStatusText.text = "User ID Not Found";
             loginStatusText.GetComponent<Animator>().SetTrigger("InvalidEntry");
         }
+
+        idInput.text = null;
+        passwordInput.text = null;
     }
 
     bool IsCorrectPassword(string username, string password)
