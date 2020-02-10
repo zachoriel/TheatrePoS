@@ -23,7 +23,7 @@ public class CustomInput : MonoBehaviour
                 SaleManager.instance.totalItems++;
                 SaleManager.instance.itemsOrdered.Add(SaleManager.instance.orderItems, item.price);
 
-                SaleManager.instance.itemSlots[SaleManager.instance.orderItems - 1].text = item.name + "  -  $" + item.price.ToString("F2");
+                SaleManager.instance.itemSlots[SaleManager.instance.orderItems - 1].text = SaleManager.instance.orderItems.ToString() + ". " + item.name + "  -  $" + item.price.ToString("F2");
                 SaleManager.instance.orderTotal += item.price;
             }
 

@@ -33,7 +33,7 @@ public class LoginManager : MonoBehaviour
     
     void Awake()
     {
-        string fileDestination = Application.persistentDataPath + "/LoginInfo.dat";
+        string fileDestination = Application.persistentDataPath + "\\LoginInfo.dat";
         FileStream file;
 
         if (File.Exists(fileDestination))
@@ -73,7 +73,7 @@ public class LoginManager : MonoBehaviour
         userRegistry.Add(userID, userPassword);
         registeredUsers++;
 
-        string fileDestination = Application.persistentDataPath + "/LoginInfo.dat";
+        string fileDestination = Application.persistentDataPath + "\\AccountInfo.dat";
         FileStream file;
 
         if (File.Exists(fileDestination))
@@ -111,7 +111,7 @@ public class LoginManager : MonoBehaviour
         }
         else
         {
-            loginStatusText.text = "User ID # Not Found";
+            loginStatusText.text = "User ID Not Found";
             loginStatusText.GetComponent<Animator>().SetTrigger("InvalidEntry");
         }
     }
