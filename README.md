@@ -10,8 +10,10 @@
      - Option to remove items
 - Shift summary displaying logged in user, numbered list of all items sold, & total profits
 - Savable shift summaries stored in a text file in a unique desktop folder
-     - Folder structure: Shift Summaries -> mm-dd-yyyy -> "Shift Summary - hh-mm-ss".txt 
+     - Folder structure: Shift Summaries -> mm-dd-yyyy -> "Shift Summary - hh-mm-ss".txt
+ 
 
+<b>NOTE:</b> I know the sales text is wonky. This was made in 1 night in the middle of a crisis situation. 😅
 
 <b>Sales Window</b>:
 ![Screenshot (457)](https://user-images.githubusercontent.com/31017086/74197141-a3895f00-4c13-11ea-8854-084c819e755d.png)
